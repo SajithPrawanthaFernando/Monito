@@ -1,4 +1,3 @@
-// src/components/AdoptionBanner.js
 import React from "react";
 import image3 from "../../assets/images/image3.png";
 import pow from "../../assets/images/dog-paw.png";

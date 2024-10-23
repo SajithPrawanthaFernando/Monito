@@ -1,4 +1,3 @@
-// src/components/PetKnowledgeSection.js
 import React from "react";
 import PetKnowledgeCard from "../PetKnowledgeCard";
 
@@ -32,21 +31,21 @@ const petKnowledgeData = [
 
 const PetKnowledgeSection = () => {
   return (
-    <div className="container mx-auto px-[130px] py-8 bg-white pb-20">
+    <div className="container mx-auto px-4 sm:px-[130px] py-8 bg-white pb-20">
       <div className="mb-6">
         <p className="text-gray-500 text-[16px]">You already know?</p>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-col sm:flex-row justify-between">
           <h1 className="text-[24px] font-bold text-blue-950">
             Useful Pet Knowledge
           </h1>
-          <button className="bg-white text-blue-950 font-medium border-2 border-blue-950 w-[151px] h-[44px] flex items-center justify-center space-x-2 rounded-full  hover:bg-blue-50">
+          <button className="mt-4 sm:mt-0 bg-white text-blue-950 font-medium border-2 border-blue-950 w-full sm:w-[151px] h-[44px] flex items-center justify-center space-x-2 rounded-full hover:bg-blue-50">
             <span className="text-blue-950 font-medium text-[14px]">
               View more &gt;
             </span>
           </button>
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {petKnowledgeData.map((item, index) => (
           <PetKnowledgeCard
             key={index}

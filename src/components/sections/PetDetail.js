@@ -6,6 +6,7 @@ import {
   FaEnvelope,
   FaChevronLeft,
   FaChevronRight,
+  FaShare,
 } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,7 +21,7 @@ const PetDetail = () => {
     "https://s3-alpha-sig.figma.com/img/8c73/5279/d3027592cb16678e1f38032890d8ac6f?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cjxjg5lzbC3kqUcfvDnAoWrObi0NIj6jNZ3FY7Emz358JT~iit~uuZTsiy0xr1zS4jotbJOAC~YoyF5~IK9KGOLV6KYqKcwOEoQlmQ78633x0whbshyRCihTWIEad9m70G6kL9X6Cq9982p~nKRGMouwFYd10LMaUBRynrbLBcx5GflXimhZraG3G7LCvmf3xbZJFI7fiQFOoszt~ET9AQtMeo9N47ZM~~IHt-lVpIp5~n~j5NYGwNf1ZqeDYBP9XUzeYv7g28d4yR-AcRqQFbiZikirNNPuKwyHBu63JbEsT3GY6E-Ut3MRZFfvAQ9uUnBFIrvBX146XVFoRXmjXw__",
   ];
 
-  const [mainImage, setMainImage] = useState(0); // Track main image index
+  const [mainImage, setMainImage] = useState(0);
 
   const handleNext = () => {
     setMainImage((prev) => (prev + 1) % images.length);
@@ -31,8 +32,8 @@ const PetDetail = () => {
   };
 
   return (
-    <div className="pt-[8rem] px-[120px] pb-20 bg-white">
-      <div className="flex justify-between">
+    <div className="pt-[8rem] px-[120px] pb-10 bg-white ">
+      <div className="flex justify-between border border-[#EBEEEF] rounded-[20px] p-4">
         {/* Left Side - Image Gallery */}
         <div className="w-1/2">
           <div className="relative">
@@ -82,20 +83,16 @@ const PetDetail = () => {
           </div>
 
           {/* Guarantee Section */}
-          <div className="mt-5 flex space-x-4">
+          <div className="mt-5 flex space-x-4 bg-[#FCEED5] rounded-[10px] mr-2">
             <div className="flex items-center space-x-2">
-              <span className="bg-red-100 text-red-600 rounded-full p-2">
-                ❤️
-              </span>
-              <p className="text-sm font-medium">
+              <span className=" text-red-600 rounded-full p-2">❤️</span>
+              <p className="text-sm font-bold text-blue-950">
                 100% health guarantee for pets
               </p>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="bg-yellow-100 text-yellow-600 rounded-full p-2">
-                🐾
-              </span>
-              <p className="text-sm font-medium">
+              <span className=" text-yellow-600 rounded-full p-2">🐾</span>
+              <p className="text-sm font-bold text-blue-950">
                 100% guarantee of pet identification
               </p>
             </div>
@@ -103,19 +100,20 @@ const PetDetail = () => {
 
           {/* Social Share Icons */}
           <div className="mt-4">
-            <p className="font-semibold">Share:</p>
             <div className="flex space-x-4 mt-2">
+              <FaShare size={18} className="text-blue-950" />
+              <p className="font-bold text-sm text-blue-950">Share:</p>
               <a href="#">
-                <FaFacebookF size={24} className="text-blue-600" />
+                <FaFacebookF size={18} className="text-[#99A2A5]" />
               </a>
               <a href="#">
-                <FaTwitter size={24} className="text-blue-400" />
+                <FaTwitter size={18} className="text-[#99A2A5]" />
               </a>
               <a href="#">
-                <FaInstagram size={24} className="text-pink-600" />
+                <FaInstagram size={18} className="text-[#99A2A5]" />
               </a>
               <a href="#">
-                <FaEnvelope size={24} className="text-gray-600" />
+                <FaEnvelope size={18} className="text-[#99A2A5]" />
               </a>
             </div>
           </div>
@@ -140,45 +138,126 @@ const PetDetail = () => {
                 Large Dog
               </a>{" "}
               {">"}
-              <span> Shiba Inu Sepia</span>
+              <a href="#" className="hover:underline">
+                {" "}
+                Shiba Inu Sepia
+              </a>
             </div>
 
             {/* Title and Price */}
             <div>
-              <h1 className="text-3xl font-bold">Shiba Inu Sepia</h1>
-              <p className="text-xl text-gray-500 mt-2">$1,000</p>
-            </div>
-
-            {/* Description */}
-            <div>
-              <p className="text-gray-600 text-base">
-                Meet the Shiba Inu! This adorable and energetic pup is known for
-                its fluffy coat and cute pointy ears. Shibas are loyal,
-                confident, and independent, making them the perfect addition to
-                any home.
+              <p className="text-sm text-gray-500 mt-2">SKU #1000078</p>
+              <h1 className="text-2xl font-bold text-blue-950">
+                Shiba Inu Sepia
+              </h1>
+              <p className="text-xl text-blue-950 mt-2 font-bold">
+                34.000.000 VND
               </p>
+            </div>
+            {/* Buttons */}
+            <div className="mt-7 flex space-x-4 pb-3">
+              <button className="bg-blue-950 text-white px-4 py-2 w-[138px] h-[44px] rounded-[57px] hover:bg-blue-800 transition">
+                Add to Cart
+              </button>
+              <button className="bg-white border-2 border-blue-950 text-blue-950 px-4 py-2 w-[217px] h-[44px] rounded-[57px] hover:bg-gray-100 transition">
+                Contact Seller
+              </button>
             </div>
 
             {/* Pet Details */}
             <div>
-              <p className="font-semibold text-lg">Details:</p>
-              <ul className="text-gray-600 space-y-1">
-                <li>Breed: Shiba Inu</li>
-                <li>Color: Sepia</li>
-                <li>Age: 3 months</li>
-                <li>Gender: Male</li>
-                <li>Weight: 15 lbs</li>
-              </ul>
-            </div>
+              <ul className="text-gray-600 space-y-1 text-sm">
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">SKU</div>
+                    <div className="flex-1">: #1000078</div>
+                  </div>
+                </li>
+                <hr className="mb-2" />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Gender</div>
+                    <div className="flex-1">: Female</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Age</div>
+                    <div className="flex-1">: 2 months</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Size</div>
+                    <div className="flex-1">: Small</div>
+                  </div>
+                </li>
+                <hr />
 
-            {/* Buttons */}
-            <div className="mt-4 flex space-x-4">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                Add to Cart
-              </button>
-              <button className="bg-white border border-gray-300 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition">
-                Contact Seller
-              </button>
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Color</div>
+                    <div className="flex-1">: Apricot & Tan</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Vaccinated</div>
+                    <div className="flex-1">: Yes</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Dewormed</div>
+                    <div className="flex-1">: Yes</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Cert</div>
+                    <div className="flex-1">: Yes (MKA)</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Microchip</div>
+                    <div className="flex-1">: Yes</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Location</div>
+                    <div className="flex-1">: Vietnam</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Published Date</div>
+                    <div className="flex-1">: 12-Oct-2022</div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div className="flex flex-row flex-cols-2 mb-2 mt-2">
+                    <div className="flex-1">Additional Information</div>
+                    <div className="flex-1">
+                      : Pure breed Shih Tzu. <br />
+                      Good body structure. <br />
+                      With MKA certification and microchip. <br />
+                      Father from champion lineage.
+                    </div>
+                  </div>
+                </li>
+                <hr />
+              </ul>
             </div>
           </div>
         </div>

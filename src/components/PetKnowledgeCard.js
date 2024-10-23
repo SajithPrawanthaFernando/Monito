@@ -1,4 +1,3 @@
-// src/components/PetKnowledgeCard.js
 import React from "react";
 
 const PetKnowledgeCard = ({ title, description, imageUrl, tag }) => {

@@ -4,7 +4,7 @@ import axios from "axios";
 const CustomerCarousel = () => {
   const [customers, setCustomers] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 5; // Number of items to display per slide
+  const itemsPerPage = 5;
 
   useEffect(() => {
     // Fetch customer data from the API
@@ -46,12 +46,8 @@ const CustomerCarousel = () => {
                   <img
                     src={customer.image}
                     alt={customer.name}
-                    className="w-full h-56 object-cover"
+                    className="w-[248px] h-[340px] rounded-[10px] object-cover"
                   />
-                  <div className="text-center p-3">
-                    <p className="font-semibold text-lg">{customer.name}</p>
-                    <p className="text-sm text-gray-600">{customer.pet}</p>
-                  </div>
                 </div>
               </div>
             ))}
@@ -63,7 +59,7 @@ const CustomerCarousel = () => {
               <button
                 key={index}
                 className={`h-3 w-3 rounded-full mx-1 ${
-                  index === currentIndex ? "bg-blue-600" : "bg-gray-300"
+                  index === currentIndex ? "bg-blue-950" : "bg-gray-300"
                 }`}
                 onClick={() => goToSlide(index)}
               ></button>
