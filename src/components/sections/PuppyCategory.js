@@ -53,15 +53,23 @@ const PuppyCategory = () => {
           {/* Page Selector */}
           <div className="flex justify-center items-center font-bold pb-4 mt-6">
             <div className="text-blue-950 px-3 text-[25px]">{"◄"}</div>
-            <div className="text-white bg-blue-950 rounded-[8px] mx-3 px-[16px] py-2 text-[16px]">
+            <div className="text-blue-950 hover:bg-blue-950 hover:text-white rounded-[8px] mx-3 px-[16px] py-2 text-[16px] ">
               1
             </div>
-            <div className="text-blue-950 mx-3 text-[16px]">2</div>
-            <div className="text-blue-950 mx-3 text-[16px]">3</div>
-            <div className="text-blue-950 mx-3 text-[16px]">4</div>
-            <div className="text-blue-950 mx-3 text-[16px]">...</div>
-            <div className="text-blue-950 mx-3 text-[16px]">28</div>
-            <div className="text-blue-950 mx-3 text-[25px]">{"►"}</div>
+            <div className="text-blue-950 rounded-[8px] mx-3 px-[16px] py-2 text-[16px] hover:bg-blue-950 hover:text-white">
+              2
+            </div>
+            <div className="text-blue-950 rounded-[8px] mx-3 px-[16px] py-2 text-[16px] hover:bg-blue-950 hover:text-white">
+              3
+            </div>
+            <div className="text-blue-950 rounded-[8px] mx-3 px-[16px] py-2 text-[16px] hover:bg-blue-950 hover:text-white">
+              4
+            </div>
+            <div className="text-blue-950 mx-3text-[16px]">...</div>
+            <div className="text-blue-950 rounded-[8px] mx-3 px-[16px] py-2 text-[16px] hover:bg-blue-950 hover:text-white">
+              28
+            </div>
+            <div className="text-blue-950 px-3 text-[25px]">{"►"}</div>
           </div>
         </div>
       </div>
